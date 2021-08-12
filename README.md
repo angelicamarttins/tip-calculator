@@ -1,2 +1,2 @@
-# tip-calculator
-  Esta calculadora de dicas é baseada no desafio do The Frontend Mentor. I used HTML, CSS and JavaScript.
+# Disclaimer
+This tip calculator is based on The Frontend Mentor challenge. I used HTML, CSS and JavaScript.
