@@ -44,6 +44,16 @@ body {
 
 /* Input Section */
 
+.article__tip {
+    max-width: 95%;
+}
+
+.article__input__btn {
+    display: grid;
+    grid-template: repeat(3, 35px) / repeat(3, 100px);
+    gap: 0.5em;
+}
+
 .section__input__p {
     font-weight: 700;
     font-size: 0.75rem;
