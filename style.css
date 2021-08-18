@@ -62,7 +62,12 @@ body {
     color: var(--very-dark-cyan);
     background-color: var(--light-grayish-cyan);
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
+}
+
+.input__icon:focus {
+    outline: none !important;
+    border: 2px solid var(--strong-cyan);
 }
 
 /* Button Section */
@@ -85,3 +90,14 @@ body {
     margin: 0.25em;
 }
 
+.button__pc {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+}
+
+.button__pc:hover {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
