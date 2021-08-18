@@ -71,8 +71,10 @@ body {
 }
 
 .article__input__btn {
+    max-width: 100%;
+    margin: auto;
     display: grid;
-    grid-template: repeat(3, 35px) / repeat(3, 100px);
+    grid-template: repeat(3, 1fr) / repeat(2, 51%);
     gap: 0.5em;
 }
 
