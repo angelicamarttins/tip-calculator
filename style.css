@@ -44,6 +44,28 @@ body {
 
 /* Input Section */
 
+.input__bill__people {
+    display: flex;
+    position: relative;
+}
+
+.img__icon {
+    position: absolute;
+    top: 30%; 
+    left: 5%;
+}
+
+.input__icon {
+    width: 100%;
+}
+
+.input__icon::placeholder {
+    position: relative;
+    left: 90%;
+}
+
+/* Button Section */
+
 .article__tip {
     max-width: 95%;
 }
