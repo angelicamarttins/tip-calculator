@@ -10,6 +10,7 @@
     list-style: none;
     font-family: 'Space Mono', monospace;
     font-size: 24px;
+    font-weight: 700;
 }
 
 :root {
@@ -57,11 +58,11 @@ body {
 
 .input__icon {
     width: 100%;
-}
-
-.input__icon::placeholder {
-    position: relative;
-    left: 90%;
+    text-align: end;
+    color: var(--very-dark-cyan);
+    background-color: var(--light-grayish-cyan);
+    border: none;
+    border-radius: 3px;
 }
 
 /* Button Section */
@@ -79,7 +80,6 @@ body {
 }
 
 .section__input__p {
-    font-weight: 700;
     font-size: 0.75rem;
     color: var(--dark-grayish-cyan-op);
     margin: 0.25em;
