@@ -76,15 +76,11 @@ body {
 
 /* Button Section */
 
-.article__tip {
-    max-width: 95%;
-}
-
 .article__input__btn {
-    max-width: 100%;
+    max-width: 95%;
     margin: 1em auto;
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(2, 51%);
+    grid-template: repeat(3, 1fr) / repeat(2, 48%);
     gap: 0.75em;
 }
 
@@ -125,9 +121,10 @@ body {
 /* Output section */
 
 .section__output {
-    max-width: 85%;
-    margin: 1em auto;
+    max-width: 90%;
+    margin: 1em;
     padding: 1em;
     background-color: var(--very-dark-cyan);
     border-radius: 15px;
 }
+
