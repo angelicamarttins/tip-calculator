@@ -97,6 +97,7 @@ body {
     color: var(--white);
     padding: 0.15em;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .button__pc:hover {
