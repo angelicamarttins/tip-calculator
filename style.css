@@ -128,3 +128,14 @@ body {
     border-radius: 15px;
 }
 
+.section__output__p {
+    font-size: 0.75rem;
+    color: var(--white);
+    margin: 0.25em;
+}
+
+.section__output__p--person {
+    font-size: 0.5rem;
+    color: var(--dark-grayish-cyan-op);
+    margin: 0.25em;
+}
