@@ -107,3 +107,17 @@ body {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
 }
+
+/* Validation input */
+
+.people__zero {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#check--zero {
+    font-size: 0.5rem;
+    color: crimson;
+    display: none;
+}
