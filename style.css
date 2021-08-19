@@ -121,3 +121,13 @@ body {
     color: crimson;
     display: none;
 }
+
+/* Output section */
+
+.section__output {
+    max-width: 85%;
+    margin: 1em auto;
+    padding: 1em;
+    background-color: var(--very-dark-cyan);
+    border-radius: 15px;
+}
