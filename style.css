@@ -139,3 +139,15 @@ body {
     color: var(--dark-grayish-cyan-op);
     margin: 0.25em;
 }
+
+.button__reset {
+    width: 100%;
+    margin-top: 1em;
+    padding: 0.4em 0;
+    font-size: 0.85em;
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
