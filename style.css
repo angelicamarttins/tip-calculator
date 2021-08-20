@@ -29,7 +29,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 /* Main section */
@@ -40,6 +39,7 @@ body {
     flex-direction: column;
     border-radius: 20px;
     padding: 1em;
+    margin: 1em 0;
 }
 
 /* Input Section */
