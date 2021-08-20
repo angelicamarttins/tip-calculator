@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 
 /* Header */
@@ -201,4 +201,26 @@ body {
 .attribution__link:hover {
     color: var(--strong-cyan);
     transition: color 0.3s;
+}
+
+/* Media Query */
+
+@media (min-width: 700px) {
+    body {
+        height: 100vh;
+    }
+
+    .main__container {
+        flex-direction: row;
+    }
+
+    .section__input,
+    .section__output {
+        margin: 0.75em;
+    }
+
+    .button__reset {
+        margin-top: 10em;
+    }
+
 }
