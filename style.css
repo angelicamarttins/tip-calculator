@@ -165,3 +165,10 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+#res__tip,
+#res__total {
+    font-size: 1.5rem;
+    color: var(--strong-cyan);
+    padding-left: 1em;
+}
