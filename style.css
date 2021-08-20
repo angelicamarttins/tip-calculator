@@ -152,3 +152,7 @@ body {
     border: none;
     cursor: pointer;
 }
+
+.button__reset:hover {
+    background-color: var(--light-grayish-cyan-op);
+}
