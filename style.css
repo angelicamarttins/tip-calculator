@@ -156,3 +156,12 @@ body {
 .button__reset:hover {
     background-color: var(--light-grayish-cyan-op);
 }
+
+/* Output - Result */
+
+.article__tip,
+.article__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
