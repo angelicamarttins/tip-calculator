@@ -181,3 +181,24 @@ body {
     color: var(--strong-cyan);
     padding-left: 1em;
 }
+
+/* Footer */
+
+.attribution {
+    margin-bottom: 1.25em;
+}
+
+.attribution__p {
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.attribution__link {
+    font-size: 0.75rem;
+    color: var(--very-dark-cyan);
+}
+
+.attribution__link:hover {
+    color: var(--strong-cyan);
+    transition: color 0.3s;
+}
