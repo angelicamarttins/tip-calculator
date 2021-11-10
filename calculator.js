@@ -94,13 +94,13 @@ function getPeople() {
 
 // Getting and calculating the values
 function amount() {
-    //if (numPeople >= 1) {
+    if (numPeople >= 1) {
         tipAmount = percentage / numPeople;
         total = (newBill + percentage) / numPeople;
 
         res__tip.innerHTML = `$${tipAmount.toFixed(2)}`;
         res__total.innerHTML = `$${total.toFixed(2)}`;
-    //}
+    }
 }
 
 // Reset button
