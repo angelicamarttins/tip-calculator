@@ -8,7 +8,7 @@ const reset = document.getElementById('reset');
 
 // New variables
 let newBill = 0;
-let percentage = 0;
+let percentage = 15;
 let buttonTips = 0;
 let numPeople = 0;
 let tipAmount = 0;
@@ -56,15 +56,17 @@ function getPercentage(event) {
 
 // Getting the number of people
 function getPeople() {
-    if (people.value == 0) {
-        checkZero.classList.add('check--zero');
-    }
+    // if (people.value == 0) {
+    //     checkZero.classList.add('check--zero');
+    // }
 
     if (!intNums(people.value)) {
         people.value = people.value.substring(0, people.value.length - 1);
     };
 
     numPeople = people.value;
+
+    amount();
 }
 // Getting and calculating the values
 function amount() {
@@ -80,8 +82,7 @@ function resetBtn() {
     bill.value = "";
     custom.value = "";
     people.value = "";
+    
     res__tip.innerHTML = `$0.00`;
     res__total.innerHTML = `$0.00`;
 };
-
-// Depois fazer a verificação se o número de pessoas está com número negativo ou real.

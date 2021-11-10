@@ -109,7 +109,8 @@ body {
     cursor: pointer;
 }
 
-.button__pc:hover {
+.button__pc:hover,
+.btn-current {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
 }
