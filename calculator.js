@@ -3,7 +3,7 @@ const bill = document.getElementById('bill');
 const custom = document.getElementById('custom');
 const buttonpc = document.querySelectorAll('.button__pc');
 const people = document.getElementById('people');
-const checkZero = document.getElementById('check--zero');
+const checkZero = document.querySelector('.check--zero');
 const reset = document.getElementById('reset');
 
 // New variables
@@ -32,6 +32,8 @@ function intNums(num) {
 // Setting the values of input 
 function getBill() {
     newBill = parseFloat(bill.value);
+
+    amount();
 };
 
 function getCustom() {
@@ -39,7 +41,11 @@ function getCustom() {
         custom.value = custom.value.substring(0, custom.value.length - 1);
     };
 
+    buttonpc.forEach(e => e.classList.remove('btn-current'));
+
     percentage = newBill * custom.value / 100;
+    
+    if (custom.vakue != '') amount();
 }
 
 // Getting the percentages of tips
@@ -47,18 +53,33 @@ function getPercentage(event) {
     let percRgx = /\d*[^%]/g;
 
     buttonpc.forEach(e => {
-    if (event.target.innerHTML == e.innerHTML) 
-        percentage = newBill * parseFloat(e.innerHTML.match(percRgx)) / 100;
+        e.classList.remove('btn-current');
+
+        if (event.target.innerHTML == e.innerHTML) {
+            e.classList.add('btn-current');
+            percentage = newBill * parseFloat(e.innerHTML.match(percRgx)) / 100;
+        }
     });
 
     custom.value = "";
+
+    amount();
 }
 
 // Getting the number of people
 function getPeople() {
-    // if (people.value == 0) {
-    //     checkZero.classList.add('check--zero');
-    // }
+    if (people.value <= 0) {
+        people.classList.remove('input__icon:focus');
+        people.classList.add('show--check--zero--border');
+        checkZero.classList.add('show--check--zero');
+
+        setTimeout(function(){
+            checkZero.classList.remove('show--check--zero');
+            people.classList.remove('show--check--zero--border');
+        },3000);
+    }
+
+    people.classList.add('input__icon:focus');
 
     if (!intNums(people.value)) {
         people.value = people.value.substring(0, people.value.length - 1);
@@ -70,11 +91,13 @@ function getPeople() {
 }
 // Getting and calculating the values
 function amount() {
-    tipAmount = percentage / numPeople;
-    total = (newBill + percentage) / numPeople;
+    //if (peopleNum >= 1) {
+        tipAmount = percentage / numPeople;
+        total = (newBill + percentage) / numPeople;
 
-    res__tip.innerHTML = `$${tipAmount.toFixed(2)}`;
-    res__total.innerHTML = `$${total.toFixed(2)}`;
+        res__tip.innerHTML = `$${tipAmount.toFixed(2)}`;
+        res__total.innerHTML = `$${total.toFixed(2)}`;
+    //}
 }
 
 // Reset button
@@ -82,7 +105,7 @@ function resetBtn() {
     bill.value = "";
     custom.value = "";
     people.value = "";
-    
+
     res__tip.innerHTML = `$0.00`;
     res__total.innerHTML = `$0.00`;
 };
