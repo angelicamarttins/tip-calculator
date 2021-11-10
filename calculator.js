@@ -10,7 +10,7 @@ const reset = document.getElementById('reset');
 let newBill = 0;
 let percentage = 15;
 let buttonTips = 0;
-let numPeople = 0;
+let numPeople = "";
 let tipAmount = 0;
 let total = 0;
 
@@ -76,8 +76,10 @@ function getPeople() {
         setTimeout(function(){
             checkZero.classList.remove('show--check--zero');
             people.classList.remove('show--check--zero--border');
-        },3000);
-    }
+        }, 1200);
+
+        people.value = "";
+    };
 
     people.classList.add('input__icon:focus');
 
@@ -87,11 +89,12 @@ function getPeople() {
 
     numPeople = people.value;
 
-    amount();
+    if (numPeople >= 1) amount();
 }
+
 // Getting and calculating the values
 function amount() {
-    //if (peopleNum >= 1) {
+    //if (numPeople >= 1) {
         tipAmount = percentage / numPeople;
         total = (newBill + percentage) / numPeople;
 
