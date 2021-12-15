@@ -83,6 +83,18 @@ body {
     border: 2px solid var(--strong-cyan);
 }
 
+/* Hidden arrows for number inputs */
+/* Chrome, Safari, Edge, Opera */
+.input__icon::-webkit-outer-spin-button, 
+.input__icon::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.input__icon {
+    -moz-appearance: textfield;
+}
 
 /* Button Section */
 
