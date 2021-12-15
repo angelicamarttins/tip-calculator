@@ -25,7 +25,7 @@ people.addEventListener('input', getPeople);
 // Verifing if user entries in Number of People and Custom are interger numbers
 
 function intNums(num) {
-    let numRgx = /^[0-9]*$/gm;
+    const numRgx = /^[0-9]*$/gm;
     return num.match(numRgx);
 };
 
