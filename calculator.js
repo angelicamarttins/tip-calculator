@@ -1,14 +1,14 @@
 // Getting elements from the page
 const bill = document.querySelector('#bill');
 const custom = document.querySelector('#custom');
-const buttonpc = document.querySelectorAll('.button__pc');
-const people = document.querySelector('#people');
+const buttonpc = document.querySelectorAll('.button--grid');
+const people = document.querySelector('#num-people');
 const checkZero = document.querySelector('.check--zero');
 const reset = document.querySelector('.button__reset');
 
 // New variables
 let newBill = 0;
-let percentage = 0.15;
+let percentage;
 let buttonTips = 0;
 let numPeople = 0;
 let tipAmount = 0;
@@ -32,6 +32,8 @@ function intNums(num) {
 // Setting the values of input 
 function getBill() {
     newBill = parseFloat(bill.value);
+    
+    percentage = newBill * 0.15;
 
     amount();
 };
@@ -88,7 +90,7 @@ function getPeople() {
         people.value = people.value.substring(0, people.value.length - 1);
     };
 
-    numPeople = people.value;
+    numPeople = parseInt(people.value);
 
     if (numPeople >= 1) amount();
 }
@@ -102,7 +104,7 @@ function amount() {
         res__tip.innerHTML = `$${tipAmount.toFixed(2)}`;
         res__total.innerHTML = `$${total.toFixed(2)}`;
 
-        console.log(numPeople)
+        console.log(percentage)
     }
 }
 
