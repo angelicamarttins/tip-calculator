@@ -23,7 +23,6 @@ people.addEventListener('input', getPeople);
 // Functions 
 
 // Verifing if user entries in Number of People and Custom are interger numbers
-
 function intNums(num) {
     const numRgx = /^[0-9]*$/gm;
     return num.match(numRgx);
@@ -36,6 +35,7 @@ function getBill() {
     amount();
 };
 
+// Getting the custom percentage
 function getCustom() {
     if (!intNums(custom.value)) {
         custom.value = custom.value.substring(0, custom.value.length - 1);
