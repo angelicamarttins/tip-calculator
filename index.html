@@ -12,55 +12,56 @@
     <h1 class="header__title">TIP CALCULATOR APP</h1>
   </header>
   
-  <main class="main__container">
+  <main class="main">
 
-    <section class="section__input">
+    <section class="input">
       
-      <article class="article__bill">
-        <p class="section__input__p">Bill</p>
-        <div class="input__bill__people">
+      <article class="bill">
+        <p class="input__p">Bill</p>
+        <div class="input__bill">
           <img class="img__icon" src="images/icon-dollar.svg" alt="Icon Dollar">
           <input class="input__icon" type="number" name="bill" id="bill" placeholder="0">
         </div>
       </article>
 
-      <article class="article__btn__tip">
-        <p class="section__input__p">Select Tip %</p>
-        <div class="article__input__btn">
-          <button name="five" id="five" class="button__pc">5%</button>
-          <button name="ten" id="ten" class="button__pc">10%</button>
-          <button name="fifteen" id="fifteen" class="button__pc btn-current">15%</button>
-          <button name="twenty-five" id="twenty-five" class="button__pc">25%</button>
-          <button name="fifty" id="fifty" class="button__pc">50%</button>
+      <article class="percentage">
+        <p class="input__p">Select Tip %</p>
+        <div class="percentage__btn">
+          <button name="five" class="button--grid">5%</button>
+          <button name="ten" class="button--grid">10%</button>
+          <button name="fifteen" class="button--grid btn-current">15%</button>
+          <button name="twenty-five" class="button--grid">25%</button>
+          <button name="fifty" class="button--grid">50%</button>
           <input class="input__icon" type="number" name="custom" id="custom" placeholder="Custom">
         </div>
       </article>
       
-      <article class="article__people">
-        <div class="people__zero">
-          <p class="section__input__p">Number of People</p>
+      <article class="people">
+        <div class="people--zero">
+          <p class="input__p">Number of People</p>
           <div class="check--zero">Can't be zero</div>
         </div>
-        <div class="input__bill__people">
+        <div class="input__people">
           <img class="img__icon" src="images/icon-person.svg" alt="Icon people">
-          <input class="input__icon" type="number" name="people" id="people" placeholder="0">
+          <input class="input__icon" type="number" name="num-people" id="num-people" placeholder="0">
         </div>
       </article>
     </section>
 
-    <section class="section__output">
-      <article class="article__tip">
-        <div class="article__output">
-          <p class="section__output__p">Tip Amount</p>
-          <p class="section__output__p--person">/ person</p>
+    <section class="output">
+
+      <article class="output__tip">
+        <div class="tip">
+          <p class="output__p">Tip Amount</p>
+          <p class="output__p--person">/ person</p>
         </div>
         <div id="res__tip">$0.00</div>
       </article>
 
-      <article class="article__total">
-        <div class="article__output">
-          <p class="section__output__p">Total</p>
-          <p class="section__output__p--person">/ person</p>
+      <article class="output__total">
+        <div class="total">
+          <p class="output__p">Total</p>
+          <p class="output__p--person">/ person</p>
         </div>
         <div id="res__total">$0.00</div>
       </article>

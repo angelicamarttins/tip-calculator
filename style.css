@@ -42,7 +42,7 @@ body {
 
 /* Main section */
 
-.main__container {
+.main {
     background-color: var(--white);
     display: flex;
     flex-direction: column;
@@ -53,12 +53,12 @@ body {
 
 /* Input Section */
 
-.section__input {
+.input {
     max-width: 85%;
     margin: auto;
 }
 
-.input__bill__people {
+.input__bill {
     display: flex;
     position: relative;
 }
@@ -99,7 +99,7 @@ input[type=number] {
 
 /* Button Section */
 
-.article__input__btn {
+.percentage__btn {
     max-width: 95%;
     margin: 1em auto;
     display: grid;
@@ -107,13 +107,13 @@ input[type=number] {
     gap: 0.75em;
 }
 
-.section__input__p {
+.input__p {
     font-size: 0.75rem;
     color: var(--dark-grayish-cyan-op);
     margin: 0.25em;
 }
 
-.button__pc {
+.button--grid {
     border: none;
     border-radius: 5px;
     background-color: var(--very-dark-cyan);
@@ -131,7 +131,7 @@ input[type=number] {
 
 /* Validation input */
 
-.people__zero {
+.people--zero {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -161,7 +161,7 @@ input[type=number] {
 
 /* Output section */
 
-.section__output {
+.output {
     max-width: 90%;
     margin: 1em;
     padding: 1em;
@@ -169,13 +169,13 @@ input[type=number] {
     border-radius: 15px;
 }
 
-.section__output__p {
+.output__p {
     font-size: 0.75rem;
     color: var(--white);
     margin: 0.25em;
 }
 
-.section__output__p--person {
+.output__p--person {
     font-size: 0.5rem;
     color: var(--dark-grayish-cyan-op);
     margin: 0.25em;
@@ -199,8 +199,8 @@ input[type=number] {
 
 /* Output - Result */
 
-.article__tip,
-.article__total {
+.output__tip,
+.output__total {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -241,12 +241,12 @@ input[type=number] {
         height: 100vh;
     }
 
-    .main__container {
+    .main {
         flex-direction: row;
     }
 
-    .section__input,
-    .section__output {
+    .input,
+    .output {
         margin: 0.75em;
     }
 
