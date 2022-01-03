@@ -1,10 +1,10 @@
 // Getting elements from the page
-const bill = document.getElementById('bill');
-const custom = document.getElementById('custom');
+const bill = document.querySelector('#bill');
+const custom = document.querySelector('#custom');
 const buttonpc = document.querySelectorAll('.button__pc');
-const people = document.getElementById('people');
+const people = document.querySelector('#people');
 const checkZero = document.querySelector('.check--zero');
-const reset = document.getElementById('reset');
+const reset = document.querySelector('.button__reset');
 
 // New variables
 let newBill = 0;
@@ -19,6 +19,7 @@ bill.addEventListener('input', getBill);
 buttonpc.forEach(element => element.addEventListener('click', getPercentage));
 custom.addEventListener('input', getCustom);
 people.addEventListener('input', getPeople);
+reset.addEventListener('click', resetBtn);
 
 // Functions 
 
@@ -54,7 +55,6 @@ function getPercentage(event) {
 
     buttonpc.forEach(e => {
         e.classList.remove('btn-current');
-        console.log(parseFloat(e.innerHTML.match(percRgx)) / 100)
     
         if (event.target.innerHTML === e.innerHTML) {
             e.classList.add('btn-current');
@@ -102,7 +102,7 @@ function amount() {
         res__tip.innerHTML = `$${tipAmount.toFixed(2)}`;
         res__total.innerHTML = `$${total.toFixed(2)}`;
 
-        console.log(newBill, percentage)
+        console.log(numPeople)
     }
 }
 
