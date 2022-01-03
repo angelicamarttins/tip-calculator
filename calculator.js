@@ -8,7 +8,7 @@ const reset = document.getElementById('reset');
 
 // New variables
 let newBill = 0;
-let percentage = 15;
+let percentage = 0.15;
 let buttonTips = 0;
 let numPeople = 0;
 let tipAmount = 0;
@@ -45,7 +45,7 @@ function getCustom() {
 
     percentage = newBill * custom.value / 100;
     
-    if (custom.vakue != '') amount();
+    if (custom.value != '') amount();
 }
 
 // Getting the percentages of tips
@@ -54,6 +54,7 @@ function getPercentage(event) {
 
     buttonpc.forEach(e => {
         e.classList.remove('btn-current');
+        console.log(parseFloat(e.innerHTML.match(percRgx)) / 100)
     
         if (event.target.innerHTML === e.innerHTML) {
             e.classList.add('btn-current');
@@ -100,6 +101,8 @@ function amount() {
 
         res__tip.innerHTML = `$${tipAmount.toFixed(2)}`;
         res__total.innerHTML = `$${total.toFixed(2)}`;
+
+        console.log(newBill, percentage)
     }
 }
 
