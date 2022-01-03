@@ -58,7 +58,8 @@ body {
     margin: auto;
 }
 
-.input__bill {
+.input__bill,
+.input__people {
     display: flex;
     position: relative;
 }
@@ -123,7 +124,7 @@ input[type=number] {
     cursor: pointer;
 }
 
-.button__pc:hover,
+.button--grid:hover,
 .btn-current {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
